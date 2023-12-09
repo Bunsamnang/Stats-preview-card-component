@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor | Stats preview card component</title>
+    <link
+      rel="icon"
+      type="image/png"
+      size="32x32"
+      href="Images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-size: 15px;
+        background-color: hsl(233, 47%, 7%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: "Roboto", sans-serif;
+      }
+
+      .title {
+        color: hsl(0, 0%, 100%);
+        font-size: 25px;
+        font-weight: 700;
+      }
+
+      .stats p {
+        color: hsla(0, 0%, 100%, 0.75);
+        margin-left: 55px;
+      }
+
+      .title span {
+        color: hsl(277, 64%, 61%);
+      }
+      .container {
+        display: grid;
+        grid-template-columns: 500px 500px;
+        height: 350px;
+      }
+
+      .stats-container {
+        background-color: hsl(244, 38%, 16%);
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
+      .stats {
+        max-width: 350px;
+      }
+
+      .stats-headings {
+        display: flex;
+        justify-content: space-between;
+      }
+      .stats-heading {
+        display: flex;
+        flex-direction: column;
+      }
+      .stats-heading :nth-child(1) {
+        margin-bottom: 10px;
+        color: hsla(0, 0%, 100%, 0.75);
+      }
+
+      img {
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+        filter: sepia(100%) hue-rotate(230deg) saturate(3) brightness(50%);
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+      @media (max-width: 600px) {
+        body {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          padding-top: 50px;
+        }
+        .container {
+          display: flex;
+          flex-direction: column-reverse;
+          width: 330px;
+          height: 600px;
+        }
+
+        .stats-container {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          border-top-left-radius: 0;
+          border-bottom-right-radius: 5px;
+        }
+        img {
+          height: 200px;
+          border-top-left-radius: 5px;
+          border-bottom-right-radius: 0;
+        }
+        .stats-headings {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+        .stats p {
+          margin-left: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="stats-container">
+        <div class="stats">
+          <p class="title">
+            Get <span>insights</span> that help your business grow.
+          </p>
+          <p>
+            Discover the benefits of data analytics and make better decisions
+            regarding revenue, customer experience, and overall efficiency.
+          </p>
+          <div class="stats-headings">
+            <p class="stats-heading">
+              <span style="font-weight: 700; font-size: 20px">10k+</span>
+              <span style="font-weight: 300; font-size: 13px">COMPANIES</span>
+            </p>
+            <p class="stats-heading">
+              <span style="font-weight: 700; font-size: 20px">314</span>
+              <span style="font-weight: 300; font-size: 13px">TEMPLATES</span>
+            </p>
+            <p class="stats-heading" style="margin-right: 32px">
+              <span style="font-weight: 700; font-size: 20px">12M+</span>
+              <span style="font-weight: 300; font-size: 13px">QUERIES</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <img src="Images/image-header-desktop.jpg" alt="" />
+    </div>
+  </body>
+</html>
