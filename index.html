@@ -44,7 +44,6 @@
       .container {
         display: grid;
         grid-template-columns: 500px 500px;
-        height: 350px;
       }
 
       .stats-container {
@@ -78,32 +77,15 @@
         border-bottom-right-radius: 5px;
       }
       @media (max-width: 1000px) {
-        body {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          height: 100vh;
-          padding-top: 50px;
-        }
         .container {
-          display: flex;
-          flex-direction: column-reverse;
-          width: 330px;
-          height: 600px;
+          grid-template-columns: 1fr;
         }
 
-        .stats-container {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          border-top-left-radius: 0;
-          border-bottom-right-radius: 5px;
-        }
         img {
           height: 200px;
           border-top-left-radius: 5px;
           border-bottom-right-radius: 0;
+          grid-row: 1;
         }
         .stats-headings {
           display: flex;
